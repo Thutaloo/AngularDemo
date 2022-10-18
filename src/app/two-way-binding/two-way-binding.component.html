@@ -1,0 +1,16 @@
+<h1>Two Way Binding</h1>
+<table>
+  <tr>
+    <td>Username</td>
+    <td><input type="text" [(ngModel)]="username" /></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" [(ngModel)]="password" /></td>
+  </tr>
+  <tr>
+    <td>
+      <input type="submit" (click)="getDetails()"/>
+    </td>
+  </tr>
+</table>

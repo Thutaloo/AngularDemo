@@ -1,0 +1,45 @@
+<h1>Structural Directive</h1>
+<input type="text" value="one" hidden />
+<input type="text" value="two" />
+<br />
+<hr />
+<div *ngIf="display">
+  <input type="text" value="three" />
+</div>
+<br />
+<hr />
+<div *ngIf="display; else elseBlock">
+  <h1>Techwave Consultancy</h1>
+</div>
+
+<ng-template #elseBlock>
+  <h1>No company given</h1>
+</ng-template>
+
+<br />
+<hr />
+<div *ngIf="display; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h1>Techwave Consultancy</h1>
+</ng-template>
+<ng-template #elseBlock>
+  <h1>No company given</h1>
+</ng-template>
+
+<br />
+<hr />
+<div *ngIf="marks == 100; then one; else two"></div>
+
+<ng-template #one>
+  <h1>Excellent</h1>
+</ng-template>
+<ng-template #two>
+  <ng-container *ngIf="marks >= 80; else three"><h1>Very Good</h1></ng-container>
+</ng-template>
+<ng-template #three>
+  <ng-container *ngIf="marks >= 70; else four"><h1>Average</h1></ng-container>
+</ng-template>
+<ng-template #four>
+  <h1>Needs Improvement</h1>
+</ng-template>

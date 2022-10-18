@@ -1,0 +1,9 @@
+<p>class-binding works!</p>
+<h1><div class="success">Sample</div></h1>
+<h1 [class]="result">You scored {{ marks }}</h1>
+<h1 [class.danger]="hasError" class="success">Message Displayed</h1>
+<h1 [ngClass]="messageClasses" class="success">Message Displayed</h1>
+<h1 [style.color]="C">Style Binding</h1>
+<h1 [style.color]="'red'">Style Binding</h1>
+<h1 [style.color]="hasError ? 'red' : 'green'">Has Error</h1>
+<h1 [ngStyle]="titleStyles">Style Binding</h1>
