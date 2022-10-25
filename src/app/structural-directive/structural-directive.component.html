@@ -35,7 +35,9 @@
   <h1>Excellent</h1>
 </ng-template>
 <ng-template #two>
-  <ng-container *ngIf="marks >= 80; else three"><h1>Very Good</h1></ng-container>
+  <ng-container *ngIf="marks >= 80; else three"
+    ><h1>Very Good</h1></ng-container
+  >
 </ng-template>
 <ng-template #three>
   <ng-container *ngIf="marks >= 70; else four"><h1>Average</h1></ng-container>
@@ -43,3 +45,18 @@
 <ng-template #four>
   <h1>Needs Improvement</h1>
 </ng-template>
+
+<div [ngSwitch]="clr">
+  <div *ngSwitchCase="'red'" [style.color]="clr">You have picked red color</div>
+  <div *ngSwitchCase="'blue'" [style.color]="clr">
+    You have picked blue color
+  </div>
+  <div *ngSwitchCase="'green'" [style.color]="clr">
+    You have picked green color
+  </div>
+  <div *ngSwitchDefault [style.color]="clr">You picked no color</div>
+</div>
+
+<div *ngFor="let n of names">
+  <h2>{{ n }}</h2>
+</div>

@@ -1,0 +1,25 @@
+<p>comsume-file works!</p>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Employee Name</td>
+    <td>Age</td>
+  </tr>
+  <tr *ngFor="let e of employees">
+    <td>{{ e.id }}</td>
+    <td>{{ e.name }}</td>
+    <td>{{ e.age }}</td>
+  </tr>
+</table>
+<br />
+<hr />
+
+<input type="text" [(ngModel)]="id" />
+<button (click)="getById()">Click Here</button>
+
+<br />
+Employee ID: {{ employee.id }}<br />
+Employee Name: {{ employee.name }}<br />
+Employee Age: {{ employee.age }}
+<br />
+<hr />

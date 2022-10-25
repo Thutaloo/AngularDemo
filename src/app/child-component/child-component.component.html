@@ -1,0 +1,41 @@
+<p>child-component works!</p>
+{{ childComponentVariable }}
+
+<input #testName type="text" />
+<button (click)="onclick(testName)">Click</button>
+<br />
+<hr />
+<input type="text" [(ngModel)]="employeeName" />
+<button (click)="onSubmit()">Click</button>
+<br />
+<hr />
+{{ name }}
+<br />
+{{ name | lowercase }}
+<br />
+{{ name | uppercase }}
+<br />
+{{ name | titlecase }}
+<br />
+{{ person | json }}
+<br />
+{{ date }}
+<br />
+{{ date | date: "short" }}
+<br />
+{{ date | date: "shortDate" }}
+<br />
+{{ date | date: "shortTime" }}
+
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Employee Name</td>
+    <td>Age</td>
+  </tr>
+  <tr *ngFor="let e of emps">
+    <td>{{ e.id }}</td>
+    <td>{{ e.name }}</td>
+    <td>{{ e.age }}</td>
+  </tr>
+</table>

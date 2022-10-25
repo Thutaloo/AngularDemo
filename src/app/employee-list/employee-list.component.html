@@ -1,0 +1,13 @@
+<p>employee-list works!</p>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Employee Name</td>
+    <td>Age</td>
+  </tr>
+  <tr *ngFor="let e of employees">
+    <td>{{ e.id }}</td>
+    <td>{{ e.name }}</td>
+    <td>{{ e.age }}</td>
+  </tr>
+</table>

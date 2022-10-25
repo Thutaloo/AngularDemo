@@ -1,0 +1,14 @@
+<p>list-button-assignment works!</p>
+<button (click)="onClick()">Click</button>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Employee Name</td>
+    <td>Age</td>
+  </tr>
+  <tr *ngFor="let e of employeeList">
+    <td>{{ e.id }}</td>
+    <td>{{ e.name }}</td>
+    <td>{{ e.age }}</td>
+  </tr>
+</table>
