@@ -8,15 +8,30 @@ import { user } from '../user';
 })
 export class InsertComponent implements OnInit {
   public topics = ['Angular', 'React', 'Vue'];
-  userModel = new user('Thu', 'thu@gmail.com', 222222, 'Angular', 'Morning', true);
+  // userModel = new user('Thu', 'thu@gmail.com', 222222, 'Angular', 'Morning', true);
+  userModel = new user();
   constructor() { }
 
-  getData() {
-    console.log(this.userModel.username + " " + this.userModel.email);
+  getTopic(t: string): boolean {
+    if (t == "")
+      return true;
+    else
+      return false;
   }
 
+  getTimePreference(tp: string): boolean {
+    if (tp == "")
+      return true;
+    else
+      return false;
+  }
+
+  // getData() {
+  //   console.log(this.userModel.username + " " + this.userModel.email);
+  // }
+
   getUserData(userForm: any) {
-    console.log(userForm.username + " " + userForm.email);
+    console.log(userForm.timePreference.length);
   }
 
   ngOnInit(): void {
