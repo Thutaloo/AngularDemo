@@ -22,4 +22,8 @@ export class HttpusersService {
   updateUser(ID: number, modifiedUser: User): Observable<Object> {
     return this.http.put<User>(this.url + ID, modifiedUser);
   }
+
+  deleteUser(ID: number): Observable<Object> {
+    return this.http.delete<User>(this.url + ID);
+  }
 }

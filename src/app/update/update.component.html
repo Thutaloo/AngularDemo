@@ -170,13 +170,26 @@
     <!-- <button class="btn btn-primary" type="submit" (click)="getData()">
         Submit
       </button> -->
-    <button
-      class="btn btn-primary"
-      type="submit"
-      (click)="getUserData(updateForm)"
-    >
-      Submit
-    </button>
+    <div class="form-group">
+      <button
+        class="btn btn-primary"
+        style="margin-right: 5px"
+        type="submit"
+        (click)="updateUserData(ID, updateForm)"
+      >
+        Update
+      </button>
+      <button
+        class="btn btn-primary"
+        type="submit"
+        (click)="deleteUser(ID)"
+      >
+        Delete
+      </button>
+    </div>
+    <div>
+      <small></small>
+    </div>
     <!-- [disabled]="!updateForm.valid" -->
     <!-- GREYED OUT SUBMIT BUTTON IF USER HASN'T ENTERED RIGHT INPUT -->
   </form>

@@ -9,14 +9,19 @@ import { User } from '../user';
 })
 export class UpdateComponent implements OnInit {
   public ID: string = "";
+  public message: any = "";
   public topics = ['Angular', 'React', 'Vue'];
   // userModel = new user('Thu', 'thu@gmail.com', 222222, 'Angular', 'Morning', true);
   userModel = new User();
   constructor(private _userService: HttpusersService) { }
 
-
   sendID(ID: any) {
     this._userService.getByID(ID.value).subscribe(data => this.userModel = data);
+  }
+
+
+  updateUserData(ID: any, userForm: any) {
+    this._userService.updateUser(ID.value, userForm.value).subscribe(data => { this.message = data });
   }
 
   getUserData(userForm: any) {
@@ -26,6 +31,10 @@ export class UpdateComponent implements OnInit {
 
     }
     console.log(userForm.valid);
+  }
+
+  deleteUser(ID: any) {
+    this._userService.deleteUser(ID.value).subscribe(data => { this.message = data })
   }
 
   getTimePreference(tp: string): boolean {
