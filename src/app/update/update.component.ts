@@ -8,10 +8,16 @@ import { User } from '../user';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
+  public ID: string = "";
   public topics = ['Angular', 'React', 'Vue'];
   // userModel = new user('Thu', 'thu@gmail.com', 222222, 'Angular', 'Morning', true);
   userModel = new User();
   constructor(private _userService: HttpusersService) { }
+
+
+  sendID(ID: any) {
+    this._userService.getByID(ID.value).subscribe(data => this.userModel = data);
+  }
 
   getUserData(userForm: any) {
     if (userForm.valid) {

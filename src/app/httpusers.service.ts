@@ -7,7 +7,7 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class HttpusersService {
-  public url = "http://localhost:3001/users";
+  public url = "http://localhost:3001/users/";
 
   constructor(private http: HttpClient) { }
 
@@ -15,7 +15,7 @@ export class HttpusersService {
     return this.http.post(this.url, user);
   }
 
-  getByID(ID: number) {
+  getByID(ID: number): Observable<User> {
     return this.http.get<User>(this.url + ID);
   }
 
