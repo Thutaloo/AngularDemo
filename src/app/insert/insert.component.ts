@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { user } from '../user';
+import { HttpusersService } from '../httpusers.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-insert',
@@ -9,8 +10,8 @@ import { user } from '../user';
 export class InsertComponent implements OnInit {
   public topics = ['Angular', 'React', 'Vue'];
   // userModel = new user('Thu', 'thu@gmail.com', 222222, 'Angular', 'Morning', true);
-  userModel = new user();
-  constructor() { }
+  userModel = new User();
+  constructor(private _userService: HttpusersService) { }
 
   getTopic(t: string): boolean {
     if (t == "")
@@ -31,7 +32,12 @@ export class InsertComponent implements OnInit {
   // }
 
   getUserData(userForm: any) {
-    console.log(userForm.timePreference.length);
+    if (userForm.valid) {
+      this._userService.addUser(userForm.value).subscribe(data => console.log(data));
+    } else {
+
+    }
+    console.log(userForm.valid);
   }
 
   ngOnInit(): void {

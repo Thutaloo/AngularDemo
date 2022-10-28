@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "username": "thu",
+      "email": "thu.nguyen@techwave.net",
+      "phoneNumber": "123-456-7890",
+      "topics": "Angular",
+      "timePreference": "Morning",
+      "transport": true,
+      "id": 1
+    },
+    {
+      "username": "test",
+      "email": "test@gmail.com",
+      "phoneNumber": "123-456-7891",
+      "topics": "Vue",
+      "timePreference": "Evening",
+      "transport": false,
+      "id": 2
+    },
+    {
+      "username": "abc",
+      "email": "abc@gmail.com",
+      "phoneNumber": "123-456-7893",
+      "topics": "React",
+      "timePreference": "Morning",
+      "transport": false,
+      "id": 3
+    }
+  ]
+}

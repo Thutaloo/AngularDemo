@@ -20,6 +20,7 @@ import { ComsumeFileComponent } from './comsume-file/comsume-file.component';
 import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
+import { HttpusersService } from './httpusers.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { DeleteComponent } from './delete/delete.component';
     DeleteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [EmployeeService, HttpEmployeeService],
+  providers: [EmployeeService, HttpEmployeeService, HttpusersService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -29,6 +29,7 @@
 
 <br />
 <hr />
+<!-- IF ELSE STATEMENTS -->
 <div *ngIf="marks == 100; then one; else two"></div>
 
 <ng-template #one>
@@ -46,6 +47,7 @@
   <h1>Needs Improvement</h1>
 </ng-template>
 
+<!-- SWITCH CASES -->
 <div [ngSwitch]="clr">
   <div *ngSwitchCase="'red'" [style.color]="clr">You have picked red color</div>
   <div *ngSwitchCase="'blue'" [style.color]="clr">
